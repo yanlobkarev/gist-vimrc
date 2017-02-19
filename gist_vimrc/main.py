@@ -153,7 +153,7 @@ def main():
     args = get_args()
     try:
         api = init_api(token=args.token)
-        locals().get(args.command)(api, args.vimrc)
+        globals().get(args.command)(api, args.vimrc)
     except TokenDiscoveryException:
         return RET_STALETOKEN
     except Exception as e:
