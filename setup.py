@@ -8,7 +8,7 @@ setup(name='gist-vimrc',
       author_email='yan.lobkarev@gmail.com',
       license='MIT',
       packages=['gist_vimrc'],
-      scripts=['bin/gist_vimrc'],
+      scripts=['bin/gist-vimrc'],
       install_requires=[
        'python-gist==0.4.7',
       ],
