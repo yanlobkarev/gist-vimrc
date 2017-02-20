@@ -105,7 +105,6 @@ def get(api, vimrc):
 
 
 def push(api, vimrc):
-    print('push '+vimrc)
     vim_gist = get(api, vimrc)
     if vim_gist:
         res = api.update(vim_gist, vimrc)
@@ -127,7 +126,7 @@ def pull(api, vimrc):
     if vim_gist:
         content = api.content(vim_gist.id)[filename]
         with open(vimrc, 'w') as vimrc_file:
-            vimrc_file.write(content)
+            vimrc_file.write(content.encode('utf-8'))
 
 
 def get_args():
