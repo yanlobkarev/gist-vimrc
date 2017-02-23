@@ -125,7 +125,7 @@ def pull(api, vimrc):
     filename = os.path.split(vimrc)[-1]
     if vim_gist:
         content = api.content(vim_gist.id)[filename]
-        with open(vimrc, 'w') as vimrc_file:
+        with open(vimrc, 'wb') as vimrc_file:
             vimrc_file.write(content.encode('utf-8'))
 
 
